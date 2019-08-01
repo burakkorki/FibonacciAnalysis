@@ -1,36 +1,32 @@
-# Cs 342 - Operating Systems Projects (2019 Spring)
+# Fibonacci Analysis - Cs 201, Fall 2018 Homework Assignment 2
  
-All the four projects are listed here.
+The problem of finding the nth Fibonacci number. Two alternative algorithms that solve this problem. Each algorithm has a different time complexity. The goal of this assignment is to simulate the growth rates of both algorithms using different inputs.
  
-## Project 1 - A Simple Shell Program
+## Algorithm 1: An iterative algorithm which works in O(n) time. 
+    long fib(long n){
+         long current = 1;
+         long prev = 1;
+         long result = 1;
 
-- Practice process creation and execution in Linux.
-- Practice interprocess communication (IPC), pipes.
-- Practice designing and doing experiments, statistics knowledge.
-- Individual
+         if(n == 0)
+             result = 0;
 
-## Project 2 - Multi-threaded Programs and Synchronization
+         for(int i = 3 ; i <= n ; i++){
+             result = current + prev;
+             prev = current;
+             current = result;
+         }
+         return result;
+     }
 
-- Multithreaded programming with Pthreads (POSIX threads).
-- Practicing synchronization, use of lock variables.
-- Designing and performing experiments; applying probability and statistics knowledge.
-- Individual
 
-## Project 3 - Synchronization and Deadlocks
+## Algorithm 2: A recursive algorithm which works in O(2n) time.
+    long fib(int n){
+	        if (n <= 1)
+	            return 1;
+	        return fib(n - 1) + fib(n - 2);
+	    }
 
-- Practice multi-threaded programming.
-- Practice synchronization: mutex and condition variables; Pthreads API. 
-- Practice deadlock detection and avoidance methods.
-- Practice designing and performing experiments.
-- Individual
-
-## Project 4 - In-Memory File System Structures
-
-- Practice file systems.
-- Practice accessing in-memory file system structures. 
-- Practice kernel module programming.
-- Touch to the Linux kernel.
-- Individual
 
 ## Copyright and Licence
 
