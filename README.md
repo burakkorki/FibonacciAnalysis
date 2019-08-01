@@ -32,4 +32,4 @@ The problem of finding the nth Fibonacci number. Two alternative algorithms that
 
 © Burak Korkmaz, Bilkent University Computer Science
 
-Licenced under the [MIT Licence](LICENCE).
+Licenced under the [MIT Licence](LICENSE).
